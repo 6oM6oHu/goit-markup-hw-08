@@ -1,0 +1,13 @@
+%navLinkPadding {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+%inputFormStyle {
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  transition: border $transit;
+  cursor: pointer;
+}

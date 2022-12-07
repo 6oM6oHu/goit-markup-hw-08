@@ -1,0 +1,39 @@
+.page-clients {
+  @include sectionSet;
+}
+
+.clients-list {
+  @include flex--center;
+  gap: $flex-gap;
+  flex-wrap: wrap;
+}
+.clients-list__item {
+  display: flex;
+  height: 92px;
+
+  @media screen and (max-width: 768px) {
+    flex-basis: calc((100% - $flex-gap) / 2);
+  }
+}
+
+.clients-list__link {
+  @include flex--center;
+  width: 100%;
+  height: auto;
+
+  color: $social-icon-color;
+  border: 1px solid $social-icon-color;
+  border-radius: 4px;
+
+  transition: color $transit, border $transit;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    border: 1px solid $brand-color;
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}

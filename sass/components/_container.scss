@@ -1,0 +1,10 @@
+/* !------------------CONTAINER------------------ */
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  @include push--auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  // outline: 1px solid red;
+}

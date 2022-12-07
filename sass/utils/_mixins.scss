@@ -1,0 +1,33 @@
+@mixin push--auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex--center($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin sectionSet($p-top: 60px, $p-bot: 60px, $text-aln: center) {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding-top: $p-top;
+  padding-bottom: $p-bot;
+  text-align: $text-aln;
+}
+
+@mixin hidden {
+  position: absolute;
+  white-space: nowrap;
+  padding: 0;
+  margin: -1px;
+
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}

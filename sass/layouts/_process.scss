@@ -1,0 +1,34 @@
+.page-process {
+  @include sectionSet($p-top: 0);
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.process-list {
+  display: flex;
+  gap: 30px;
+}
+
+.process-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-list__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+
+  @include flex--center;
+  width: 100%;
+
+  color: $white-text-color;
+  background: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
