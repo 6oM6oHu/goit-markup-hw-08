@@ -1,25 +1,33 @@
 .page-clients {
   @include sectionSet;
+  @media screen and (min-width: 1200px) {
+    @include sectionSet($p-top: 94px, $p-bot: 94px);
+  }
 }
 
 .clients-list {
   @include flex--center;
-  gap: $flex-gap;
   flex-wrap: wrap;
+  gap: $flex-gap;
 }
 .clients-list__item {
   display: flex;
   height: 92px;
+  flex-basis: calc((100% - $flex-gap) / 2);
 
-  @media screen and (max-width: 768px) {
-    flex-basis: calc((100% - $flex-gap) / 2);
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - $flex-gap * 2) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - $flex-gap * 5) / 6);
   }
 }
 
 .clients-list__link {
   @include flex--center;
   width: 100%;
-  height: auto;
 
   color: $social-icon-color;
   border: 1px solid $social-icon-color;
@@ -30,6 +38,7 @@
   &:hover,
   &:focus {
     color: $brand-color;
+    outline: none;
     border: 1px solid $brand-color;
   }
 }

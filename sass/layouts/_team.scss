@@ -1,7 +1,10 @@
 .page-team {
   @include sectionSet;
-
   background-color: $section-bg-color;
+
+  @media screen and (min-width: 1200px) {
+    @include sectionSet($p-top: 94px, $p-bot: 94px);
+  }
 }
 
 .team-list {
@@ -12,14 +15,25 @@
 
 .team-list__item {
   background-color: $white-bg-color;
-
-  // transition: box-shadow var(--transit);
+  width: 100%;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - $flex-gap) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - $flex-gap * 3) / 4);
 
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    flex-basis: 100%;
+    box-shadow: none;
+    transition: box-shadow var(--transit);
+    &:hover {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
   }
 }
 

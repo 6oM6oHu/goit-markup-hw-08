@@ -5,8 +5,8 @@
   margin: 0;
   @include push--auto;
   background-color: $white-bg-color;
-  border: 1px solid #ececec;
-  border-top: none;
+  border-bottom: 1px solid #ececec;
+  display: flex;
 }
 
 .page-header__nav {
@@ -14,19 +14,26 @@
 }
 .header__logo--position {
   margin-left: 0;
-  padding: 16px 0;
 }
 .logo-header__text {
   color: $black-text-color;
 }
 
+.nav-wrap {
+}
+
 .site-nav {
-  display: inline-flex;
+  display: none;
   margin-left: 93px;
   gap: 50px;
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
   }
 }
 
@@ -67,7 +74,7 @@
 // }
 
 .contacts-list {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
   margin-left: auto;
