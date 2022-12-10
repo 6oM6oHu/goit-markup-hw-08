@@ -5,7 +5,7 @@
 
 .footer-content {
   @include push--auto;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     display: flex;
     gap: 94px;
     align-items: baseline;
@@ -20,21 +20,21 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     flex-direction: row;
     text-align: left;
     gap: 165px;
     align-items: baseline;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     gap: 70px;
     margin-bottom: 0;
   }
 }
 
 .footer-address {
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 231px;
   }
 }
@@ -89,12 +89,12 @@
 
   gap: 20px;
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
     max-width: 450px;
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 570px;
     text-align: left;
     max-height: 86px;
@@ -107,9 +107,9 @@
   gap: 20px;
   justify-content: center;
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     flex-wrap: nowrap;
     width: 100%;
     gap: 12px;
@@ -152,7 +152,7 @@
     max-width: 450px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 358px;
   }
 }

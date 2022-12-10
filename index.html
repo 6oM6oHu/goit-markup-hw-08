@@ -33,38 +33,99 @@
         <a href="./index.html" class="logo header__logo--position"
           >Web<span class="logo-header__text">Studio</span></a
         >
-        <div class="nav-wrap">
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link site-nav__link--current" rel="noreferrer noopener"
-                >Студія</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link" rel="noreferrer noopener">Контакти</a>
-            </li>
-          </ul>
-          <ul class="contacts-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__link" href="mailto:info@devstudio.com">
-                <svg class="contacts-list_icon" width="16" height="12">
-                  <use href="./images/social-icon.svg#icon-envelope"></use></svg
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__link" href="tel:+380961111111"
-                ><svg class="contacts-list_icon" width="10" height="16">
-                  <use href="./images/social-icon.svg#icon-smartphone"></use></svg
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
+
+        <ul class="site-nav">
+          <li class="site-nav__item">
+            <a href="" class="site-nav__link site-nav__link--current" rel="noreferrer noopener"
+              >Студія</a
+            >
+          </li>
+          <li class="site-nav__item">
+            <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="" class="site-nav__link" rel="noreferrer noopener">Контакти</a>
+          </li>
+        </ul>
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <a class="contacts-list__link" href="mailto:info@devstudio.com">
+              <svg class="contacts-list_icon" width="16" height="12">
+                <use href="./images/social-icon.svg#icon-envelope"></use></svg
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-list__item">
+            <a class="contacts-list__link" href="tel:+380961111111"
+              ><svg class="contacts-list_icon" width="10" height="16">
+                <use href="./images/social-icon.svg#icon-smartphone"></use></svg
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="open-btn" width="24" height="16">
+            <use href="./images/social-icon.svg#icon-burger"></use>
+          </svg>
+        </button>
       </nav>
+
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="menu-top">
+            <button class="close-btn" type="button" data-menu-close>
+              <svg class="close-icon" width="19" height="19">
+                <use href="./images/social-icon.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-list">
+              <li class="mobile-list__item">
+                <a href="" class="mobile-list__link mobile-current" rel="noreferrer noopener"
+                  >Студія</a
+                >
+              </li>
+              <li class="mobile-list__item">
+                <a href="./portfolio.html" class="mobile-list__link">Портфоліо</a>
+              </li>
+              <li class="mobile-list__item">
+                <a href="" class="mobile-list__link" rel="noreferrer noopener">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-bottom">
+            <ul class="mobile-contacts-list">
+              <li class="mobile-contacts__item">
+                <a class="mobile-contacts__link mobile-contacts__tel" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contacts__item">
+                <a
+                  class="mobile-contacts__link mobile-contact__mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobi-soc-list">
+              <li class="mobi-soc__item">
+                <a href="" class="mobi-soc__link">Instagram</a>
+              </li>
+              <li class="mobi-soc__item">
+                <a href="" class="mobi-soc__link">Twitter</a>
+              </li>
+              <li class="mobi-soc__item">
+                <a href="" class="mobi-soc__link">Facebook</a>
+              </li>
+              <li class="mobi-soc__item">
+                <a href="" class="mobi-soc__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- Hero -->
     <main>
@@ -137,37 +198,43 @@
           <ul class="process-list" data-aos="fade-down" data-aos-duration="350">
             <li class="process-list__item">
               <div class="process-wrap">
-                <img
-                  src="./images/box1.jpg"
-                  alt="Робота на персональному компьютері"
-                  width="370"
-                  height="294"
-                  class="process-list__image"
-                />
+                <picture>
+                  <source
+                    srcset="./images/works1-desktop.jpg 1s, ./images/works1-desktop-2x.jpg 2s
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./images/works1-desktop.jpg" alt="Робота на персональному компьютері" />
+                </picture>
+
                 <p class="process-list__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="process-list__item">
               <div class="process-wrap">
-                <img
-                  src="./images/box2.jpg"
-                  alt="Розробка  дизайна на макбуці"
-                  width="370"
-                  height="294"
-                  class="process-list__image"
-                />
+                <picture>
+                  <source
+                    srcset="./images/works2-desktop.jpg 1s, ./images/works2-desktop-2x.jpg 2s
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./images/works2-desktop.jpg" alt="Розробка  дизайна на макбуці" />
+                </picture>
+
                 <p class="process-list__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="process-list__item">
               <div class="process-wrap">
-                <img
-                  src="./images/box3.jpg"
-                  alt="Планшет з інфографікой"
-                  width="370"
-                  height="294"
-                  class="process-list__image"
-                />
+                <picture>
+                  <source
+                    srcset="./images/works3-desktop.jpg 1s, ./images/works3-desktop-2x.jpg 2s
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./images/works3-desktop.jpg" alt="Планшет з інфографікой" />
+                </picture>
+
                 <p class="process-list__text">Дизайнерські рішення</p>
               </div>
             </li>
@@ -180,10 +247,26 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list" data-aos="fade-down" data-aos-duration="350">
             <li class="team-list__item">
-              <img
-                src="./images/team/igor.jpg"
-                alt="молодий хлопець у коричневій сорочці, з бородою та в окулярах"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/igor-desktop.jpg 1x, ./images/team/igor-desktop-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/igor-tablet.jpg 1x, ./images/team/igor-tablet-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/igor-mobile.jpg 1x, ./images/team/igor-mobile-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/igor-mobile.jpg"
+                  alt="молодий хлопець у коричневій сорочці, з бородою та в окулярах"
+                  width="450px"
+                />
+              </picture>
+
               <div class="team-content">
                 <h3 class="team-list_title">Ігор Дем'яненко</h3>
                 <p class="team-list__text">Product Designer</p>
@@ -221,12 +304,26 @@
             </li>
 
             <li class="team-list__item">
-              <img
-                src="./images/team/olga.jpg"
-                alt="Дівчина з білим волоссям та в окулярах, яка посміхається"
-                feature-list__item
-                class="photo"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/olga-desktop.jpg 1x, ./images/team/olga-desktop-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/olga-tablet.jpg 1x, ./images/team/olga-tablet-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/olga-mobile.jpg 1x, ./images/team/olga-mobile-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/olga-mobile.jpg"
+                  alt="Дівчина з білим волоссям та в окулярах, яка посміхається"
+                  width="450px"
+                />
+              </picture>
+
               <div class="team-content">
                 <h3 class="team-list_title">Ольга Рєпіна</h3>
                 <p class="team-list__text">Frontend Developer</p>
@@ -264,11 +361,29 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/team/mikola.jpg"
-                alt="Молодий хлопець в голубій рубашці"
-                feature-list__item
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mikola-desktop.jpg    1x,
+                    ./images/team/mikola-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/mikola-tablet.jpg 1x, ./images/team/mikola-tablet-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/mikola-mobile.jpg 1x, ./images/team/mikola-mobile-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/mikola-mobile.jpg"
+                  alt="Молодий хлопець в голубій рубашці"
+                  width="450px"
+                />
+              </picture>
+
               <div class="team-content">
                 <h3 class="team-list_title">Микола Тарасов</h3>
                 <p class="team-list__text">Marketing</p>
@@ -306,11 +421,35 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/team/mihailo.jpg"
-                alt="Хлопець у чорній футболці з бородою та в окулярах"
-                feature-list__item
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mihailo-desktop.jpg    1x,
+                    ./images/team/mihailo-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mihailo-tablet.jpg    1x,
+                    ./images/team/mihailo-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mihailo-mobile.jpg    1x,
+                    ./images/team/mihailo-mobile-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/mihailo-mobile.jpg"
+                  alt="Хлопець у чорній футболці з бородою та в окулярах"
+                  width="450px"
+                />
+              </picture>
+
               <div class="team-content">
                 <h3 class="team-list_title">Михайло Єрмаков</h3>
                 <p class="team-list__text">UI Designer</p>
@@ -491,70 +630,72 @@
         <form action="#" class="mine-form">
           <b class="mine-form_title">Залиште свої дані, ми вам передзвонимо</b>
 
-          <div class="form-field">
-            <label for="name" class="mine-form__label">Ім'я</label>
-            <span class="input-wrap">
-              <input
-                class="mine-form__input"
-                type="name"
-                name="name"
-                id="name"
-                required
-                minlength="3"
-                placeholder="Ваше Ім'я"
-              />
-              <svg class="mine-form__icon" width="18" height="18">
-                <use href="./images/social-icon.svg#icon-person"></use>
-              </svg>
-            </span>
-          </div>
+          <div class="form-wrap">
+            <div class="form-field">
+              <label for="name" class="mine-form__label">Ім'я</label>
+              <span class="input-wrap">
+                <input
+                  class="mine-form__input"
+                  type="name"
+                  name="name"
+                  id="name"
+                  required
+                  minlength="3"
+                  placeholder="Ваше Ім'я"
+                />
+                <svg class="mine-form__icon" width="18" height="18">
+                  <use href="./images/social-icon.svg#icon-person"></use>
+                </svg>
+              </span>
+            </div>
 
-          <div class="form-field">
-            <label for="tel" class="mine-form__label">Телефон</label>
-            <span class="input-wrap">
-              <input
-                class="mine-form__input"
-                type="tel"
-                name="tel"
-                id="tel"
-                required
-                placeholder=" "
-                value="+380"
-                minlength="13"
-                maxlength="13"
-              />
-              <svg class="mine-form__icon" width="18" height="18">
-                <use href="./images/social-icon.svg#icon-form-phone"></use>
-              </svg>
-            </span>
-          </div>
+            <div class="form-field">
+              <label for="tel" class="mine-form__label">Телефон</label>
+              <span class="input-wrap">
+                <input
+                  class="mine-form__input"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  required
+                  placeholder=" "
+                  value="+380"
+                  minlength="13"
+                  maxlength="13"
+                />
+                <svg class="mine-form__icon" width="18" height="18">
+                  <use href="./images/social-icon.svg#icon-form-phone"></use>
+                </svg>
+              </span>
+            </div>
 
-          <div class="form-field">
-            <label for="mail" class="mine-form__label">Пошта</label>
-            <span class="input-wrap">
-              <input
-                class="mine-form__input"
-                type="email"
-                name="mail"
-                id="mail"
-                required
-                placeholder="test@gmail.com"
-              />
-              <svg class="mine-form__icon" width="18" height="18">
-                <use href="./images/social-icon.svg#icon-email"></use>
-              </svg>
-            </span>
-          </div>
+            <div class="form-field">
+              <label for="mail" class="mine-form__label">Пошта</label>
+              <span class="input-wrap">
+                <input
+                  class="mine-form__input"
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  required
+                  placeholder="test@gmail.com"
+                />
+                <svg class="mine-form__icon" width="18" height="18">
+                  <use href="./images/social-icon.svg#icon-email"></use>
+                </svg>
+              </span>
+            </div>
 
-          <div class="form-field">
-            <label class="mine-form__label" for="comment">Коментар</label>
-            <textarea
-              class="mine-form__comment"
-              name="comment"
-              id="comment"
-              rows="10"
-              placeholder="Введіть текст"
-            ></textarea>
+            <div class="form-field">
+              <label class="mine-form__label" for="comment">Коментар</label>
+              <textarea
+                class="mine-form__comment"
+                name="comment"
+                id="comment"
+                rows="10"
+                placeholder="Введіть текст"
+              ></textarea>
+            </div>
           </div>
 
           <div class="form-terms">
@@ -569,15 +710,18 @@
               <svg class="form-terms__icon" width="18" height="18">
                 <use href="./images/social-icon.svg#icon-check"></use>
               </svg>
-              Погоджуюся з розсилкою та приймаю
-              <a href="#" class="form-terms__link">Умови договору</a></label
-            >
+              <span class="lable_text">
+                Погоджуюся з розсилкою та приймаю
+                <a href="#" class="form-terms__link">Умови договору</a>
+              </span>
+            </label>
           </div>
           <button type="submit" class="btn mine-form__button">Відправити</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

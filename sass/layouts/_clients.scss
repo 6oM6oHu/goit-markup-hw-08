@@ -1,6 +1,6 @@
 .page-clients {
   @include sectionSet;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     @include sectionSet($p-top: 94px, $p-bot: 94px);
   }
 }
@@ -15,12 +15,12 @@
   height: 92px;
   flex-basis: calc((100% - $flex-gap) / 2);
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     flex-basis: calc((100% - $flex-gap * 2) / 3);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     flex-basis: calc((100% - $flex-gap * 5) / 6);
   }
 }

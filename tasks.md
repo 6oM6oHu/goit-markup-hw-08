@@ -4,4 +4,6 @@
 4. Process +
 5. Team +
 6. Clients +
-7. Footer
+7. Footer +
+8. Portfolio +
+9. Modal +

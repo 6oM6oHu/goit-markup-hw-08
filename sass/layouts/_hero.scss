@@ -5,20 +5,29 @@
 
   text-align: center;
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/hero-480.jpg);
+  background-image: $grad-img, url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  @media screen and (min-width: 768px) {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/hero-768.jpg);
+  @include mobile {
+    @include retina {
+      background-image: $grad-img, url(../images/hero-mobile-2x.jpg);
+    }
   }
-  @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/hero.jpeg);
+
+  @include tablet {
+    background-image: $grad-img, url(../images/hero-tablet.jpg);
+    @include retina {
+      background-image: $grad-img, url(../images/hero-tablet-2x.jpg);
+    }
+  }
+  @include desktop {
+    background-image: $grad-img, url(/images/hero-desk.jpg);
     padding: 200px 0px;
+    @include retina {
+      background-image: $grad-img, url(/images/hero-desk-2x.jpg);
+    }
   }
 }
 
@@ -36,12 +45,12 @@
 
   color: $white-text-color;
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
     max-width: 360px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 696px;
     font-size: 44px;
     line-height: 1.36;

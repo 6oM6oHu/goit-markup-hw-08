@@ -1,12 +1,23 @@
 .page-header {
+  position: relative;
   max-width: 1600px;
-  min-height: 60px;
+  max-height: 80px;
   padding: 0;
   margin: 0;
   @include push--auto;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
   background-color: $white-bg-color;
   border-bottom: 1px solid #ececec;
   display: flex;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .page-header__nav {
@@ -19,76 +30,74 @@
   color: $black-text-color;
 }
 
-.nav-wrap {
-}
-
 .site-nav {
   display: none;
-  margin-left: 93px;
+  margin-left: 83px;
   gap: 50px;
 
-  @media screen and (min-width: 480px) {
-  }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+    margin-left: 93px;
   }
 }
 
-// .site-nav__link {
-//   display: block;
-//   @extend %navLinkPadding;
+.site-nav__link {
+  display: block;
+  @extend %navLinkPadding;
 
-//   font-weight: 500;
-//   line-height: 1.3333;
-//   letter-spacing: 0.02em;
+  font-weight: 500;
+  line-height: 1.3333;
+  letter-spacing: 0.02em;
 
-//   color: $secondary-text-color;
+  color: $secondary-text-color;
 
-//   transition: color $transit;
+  transition: color $transit;
 
-//   &:hover,
-//   &:focus {
-//     color: $brand-color;
-//   }
-// }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+}
 
-// .site-nav__link--current {
-//   color: $brand-color;
-//   position: relative;
+.site-nav__link--current {
+  color: $brand-color;
+  position: relative;
 
-//   &::after {
-//     position: absolute;
-//     content: '';
-//     bottom: -1px;
-//     left: 0;
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -1px;
+    left: 0;
 
-//     width: 100%;
-//     height: 4px;
+    width: 100%;
+    height: 4px;
 
-//     background-color: $brand-color;
-//     border-radius: 2px;
-//   }
-// }
+    background-color: $brand-color;
+    border-radius: 2px;
+  }
+}
 
 .contacts-list {
   display: none;
   flex-direction: column;
-  gap: 10px;
   margin-left: auto;
-  padding: 21px 0;
+  align-items: flex-start;
+  gap: 10px;
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  @include tablet {
+    display: flex;
   }
-  // gap: $flex-gap;
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .contacts-list__link {
-  display: flex;
-
+  @include flex--center;
   gap: 10px;
 
   font-weight: 500;

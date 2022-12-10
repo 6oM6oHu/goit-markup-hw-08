@@ -2,7 +2,7 @@
   background-color: $white-bg-color;
   @include sectionSet($text-aln: left);
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     @include sectionSet($p-top: 94px, $p-bot: 94px);
   }
 }
@@ -16,14 +16,14 @@
 .feature-list__item {
   width: 100%;
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
     max-width: 480px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     justify-content: center;
     flex-basis: calc((100% - $flex-gap) / 2);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     flex-basis: calc((100% - $flex-gap * 3) / 4);
   }
 }

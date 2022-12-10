@@ -32,14 +32,26 @@
   clip-path: inset(50%);
 }
 
-// @mixin item--position() {
-//   @media screen and (min-width: 480px) {
-//     max-width: $mobile;
-//   }
-//   @media screen and (min-width: 768px) {
-//     flex-basis: calc((100% - $flex-gap) / 2);
-//   }
-//   @media screen and (min-width: 1200px) {
-//     flex-basis: calc((100% - $flex-gap * 3) / 4);
-//   }
-// }
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
