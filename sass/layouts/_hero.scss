@@ -23,10 +23,10 @@
     }
   }
   @include desktop {
-    background-image: $grad-img, url(/images/hero-desk.jpg);
+    background-image: $grad-img, url(../images/hero-desk.jpg);
     padding: 200px 0px;
     @include retina {
-      background-image: $grad-img, url(/images/hero-desk-2x.jpg);
+      background-image: $grad-img, url(../images/hero-desk-2x.jpg);
     }
   }
 }
