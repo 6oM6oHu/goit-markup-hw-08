@@ -57,6 +57,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   color: #757575;
 }
 
@@ -68,6 +70,10 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 .hidden {
