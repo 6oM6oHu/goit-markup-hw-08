@@ -4,6 +4,7 @@ body {
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
+  overflow-x: hidden;
 }
 
 .is-hidden {
@@ -14,7 +15,4 @@ body {
 
 .no-scroll {
   overflow: hidden;
-}
-
-html {
 }

@@ -1,5 +1,6 @@
 .page-footer {
   @include sectionSet($p-top: 60px, $p-bot: 60px);
+
   background-color: $footer-bg-color;
 }
 
