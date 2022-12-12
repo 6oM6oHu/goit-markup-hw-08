@@ -103,9 +103,11 @@
 }
 .mobile-contacts__link {
 }
+
 .mobi-soc-list {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 48px;
 }
 .mobi-soc__item {

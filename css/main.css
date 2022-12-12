@@ -4,7 +4,7 @@
   padding-bottom: 32px;
 }
 
-.mine-form__comment, .mine-form__input {
+.main-form__comment, .main-form__input {
   outline: none;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -275,7 +275,7 @@ body {
   fill: #2196f3;
 }
 
-.mine-form_title {
+.main-form_title {
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
@@ -299,8 +299,9 @@ body {
   gap: 4px;
 }
 
-.mine-form__label {
+.main-form__label {
   letter-spacing: 0.01em;
+  font-size: 12px;
   color: #757575;
   cursor: pointer;
 }
@@ -310,25 +311,25 @@ body {
   position: relative;
 }
 
-.mine-form__input {
+.main-form__input {
   height: 40px;
   width: 100%;
   padding-left: 42px;
 }
-.mine-form__input:hover, .mine-form__input:focus {
+.main-form__input:hover, .main-form__input:focus {
   border: 1px solid #2196f3;
 }
-.mine-form__input:not(:focus):not(:-moz-placeholder-shown):invalid {
+.main-form__input:not(:focus):not(:-moz-placeholder-shown):invalid {
   border-color: rgb(229, 119, 119);
 }
-.mine-form__input:not(:focus):not(:-ms-input-placeholder):invalid {
+.main-form__input:not(:focus):not(:-ms-input-placeholder):invalid {
   border-color: rgb(229, 119, 119);
 }
-.mine-form__input:not(:focus):not(:placeholder-shown):invalid {
+.main-form__input:not(:focus):not(:placeholder-shown):invalid {
   border-color: rgb(229, 119, 119);
 }
 
-.mine-form__icon {
+.main-form__icon {
   position: absolute;
   bottom: 50%;
   left: 11px;
@@ -338,16 +339,16 @@ body {
   transform: translateY(50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mine-form__input:focus + .mine-form__icon, .form-terms:hover .mine-form__icon {
+.main-form__input:focus + .main-form__icon, .form-terms:hover .main-form__icon {
   fill: #2196f3;
 }
-.mine-form__input:not(:focus):not(:-moz-placeholder-shown):invalid + .mine-form__icon {
+.main-form__input:not(:focus):not(:-moz-placeholder-shown):invalid + .main-form__icon {
   fill: rgb(229, 119, 119);
 }
-.mine-form__input:not(:focus):not(:-ms-input-placeholder):invalid + .mine-form__icon {
+.main-form__input:not(:focus):not(:-ms-input-placeholder):invalid + .main-form__icon {
   fill: rgb(229, 119, 119);
 }
-.mine-form__input:not(:focus):not(:placeholder-shown):invalid + .mine-form__icon {
+.main-form__input:not(:focus):not(:placeholder-shown):invalid + .main-form__icon {
   fill: rgb(229, 119, 119);
 }
 
@@ -355,28 +356,29 @@ body {
   margin-bottom: 30px;
 }
 
-.mine-form__comment {
+.main-form__comment {
   padding: 12px 16px;
   outline: none;
+  max-height: 120px;
   resize: none;
 }
-.mine-form__comment::-moz-placeholder {
+.main-form__comment::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.mine-form__comment:-ms-input-placeholder {
+.main-form__comment:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.mine-form__comment::placeholder {
+.main-form__comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.mine-form__comment:hover, .mine-form__comment:focus {
+.main-form__comment:hover, .main-form__comment:focus {
   border: 1px solid #2196f3;
 }
 
 .form-terms__label {
   display: flex;
-  align-items: flex-end;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   cursor: pointer;
 }
@@ -402,12 +404,12 @@ body {
   color: #2196f3;
 }
 
-.mine-form__button {
+.main-form__button {
   display: block;
   margin: 0 auto;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mine-form__button:hover, .mine-form__button:focus {
+.main-form__button:hover, .main-form__button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -621,6 +623,7 @@ body {
 .mobi-soc-list {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 48px;
 }
 
@@ -759,9 +762,15 @@ body {
   text-transform: uppercase;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .feature-list__title {
+    text-align: left;
+  }
+}
 
 .feature-list__text {
   line-height: 1.7;
+  text-align: left;
 }
 
 .page-process {
@@ -810,6 +819,7 @@ body {
   padding-bottom: 60px;
   text-align: center;
   background-color: #f5f4fa;
+  font-size: 16px;
 }
 @media screen and (min-width: 1200px) {
   .page-team {
@@ -859,12 +869,12 @@ body {
   padding-top: 30px;
   padding-bottom: 24px;
   line-height: 1.9;
-  font-size: 16px;
 }
 
 .team-list_title {
   margin-bottom: 10px;
   font-weight: 500;
+  font-size: 16px;
   color: #212121;
 }
 
@@ -950,7 +960,6 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-content {
     display: flex;
-    gap: 94px;
     align-items: baseline;
   }
 }
@@ -992,6 +1001,8 @@ body {
 }
 
 .footer-logo--margin {
+  padding: 0;
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -1031,10 +1042,15 @@ body {
   justify-content: center;
   gap: 20px;
 }
+@media screen and (min-width: 758px) and (max-width: 1200px) {
+  .footer-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 480px) {
   .footer-form {
     max-width: 450px;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1042,6 +1058,7 @@ body {
     max-width: 570px;
     text-align: left;
     max-height: 86px;
+    margin-left: auto;
   }
 }
 

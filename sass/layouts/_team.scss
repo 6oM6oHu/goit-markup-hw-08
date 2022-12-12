@@ -2,6 +2,8 @@
   @include sectionSet;
   background-color: $section-bg-color;
 
+  font-size: 16px;
+
   @include desktop {
     @include sectionSet($p-top: 94px, $p-bot: 94px);
   }
@@ -42,13 +44,14 @@
   padding-bottom: 24px;
 
   line-height: 1.9;
-  font-size: 16px;
 }
 
 .team-list_title {
   margin-bottom: 10px;
 
   font-weight: 500;
+  font-size: 16px;
+
   color: $secondary-text-color;
 }
 

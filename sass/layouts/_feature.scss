@@ -45,8 +45,13 @@
   text-transform: uppercase;
 
   color: $secondary-text-color;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .feature-list__text {
   line-height: 1.7;
+  text-align: left;
 }
